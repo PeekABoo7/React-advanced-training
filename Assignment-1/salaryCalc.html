@@ -49,7 +49,7 @@
 
             onValueChange = (evt) => {
                 let d = {};
-                d[evt.target.id] = evt.target.value;
+                d[evt.target.id] = parseInt(evt.target.value);
                 this.setState(d);
             }
 
