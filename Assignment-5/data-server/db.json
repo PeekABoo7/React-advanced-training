@@ -1,0 +1,21 @@
+{
+  "bugs": [
+    {
+      "id": 2,
+      "name": "Server communication failure",
+      "createdAt": "2020-11-26T11:17:31.342Z",
+      "isClosed": false,
+      "project": "Bug Tracker"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Bug Tracker"
+    },
+    {
+      "id": 2,
+      "name": "Payroll Master"
+    }
+  ]
+}
