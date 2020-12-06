@@ -12,22 +12,17 @@ async function getById(id){
     return response.data;
 }
 
-async function save(project){
-    if (project.id === 0 ){
-        const response = await axios.post(serviceEndPoint, project);
+async function save(projectData){
+    if (projectData.id === 0 ){
+        const response = await axios.post(serviceEndPoint, projectData);
         return response.data;
     } else {
-        const response = await axios.put(`${serviceEndPoint}/${project.id}`, project);
+        const response = await axios.put(`${serviceEndPoint}/${projectData.id}`, projectData);
         return response.data;
     }
 }
 
-async function remove(project){
-    const response = await axios.delete(`${serviceEndPoint}/${project.id}`);
-    return response.data;
-}
-
-const projectApi = { getAll, getById, save, remove };
+const projectApi = { getAll, getById, save };
 
 export default projectApi;
 

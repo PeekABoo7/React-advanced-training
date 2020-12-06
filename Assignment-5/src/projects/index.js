@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as projectActionCreators from './actions';
 
-const Projects = ({ projects, addNew }) => {
+const Projects = ({ projects, addNew, load }) => {
+  useEffect(() =>{
+    load();
+  }, [load]);
   const [newProjectName, setNewProjectName] = useState("");
   return (
     <div>
